@@ -49,12 +49,13 @@ class _main extends State<home_page> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          height: 250.0,
-          color: Colors.red,
-          child: Carousel(
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 256.0,
+            
+            flexibleSpace:Carousel(
             images: [
               NetworkImage(
                   'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/1170x500-01-1.jpg?alt=media&token=664522c6-1a23-48c4-baa8-82b59c2884df'),
@@ -66,22 +67,60 @@ class _main extends State<home_page> {
                   'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/wgep067_thumbRAISEYOURHAND.png?alt=media&token=aba74d31-845c-44c1-b202-e7a711519119')
             ],
           ),
-        ),
-        Container(
-          height: 150,
-          width: double.infinity,
-          color: pageBackgroudcolor,
-          padding: const EdgeInsets.all(2.0),
-          child: FadeInImage.memoryNetwork(
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Column(children: <Widget>[
+                  _buildAd_space(),
+                  
+                ],)
+              ]
+            ),
+          )
+        ],
+      ),
+    );
+    }
+    Widget buildTestCard(){
+      return Container(
+        height: 150,
+        child: Card(
+          child: InkWell(
+            onTap: (){},
+            child:  FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
                 'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
             fit: BoxFit.cover,
           ),
+          ),
         ),
-        Flexible(
+      );
+    }
+    Widget _buildAd_space(){
+      return  Container(
+          height: 150,
+          width: double.infinity,
+          color: pageBackgroudcolor,
+          padding: const EdgeInsets.all(2.0),
+          child:InkWell(
+            onTap: (){},
+            child:  FadeInImage.memoryNetwork(
+            placeholder: kTransparentImage,
+            image:
+                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+            fit: BoxFit.cover,
+          ),
+          )
+        );
+    }
+    Widget _buildNewGrideList(){
+      return  Column(
+        children: <Widget>[
+           Flexible(
           child: Container(
-            color: Colors.green,
+            color: pageBackgroudcolor,
             child: GridView.count(
               primary: true,
               padding: const EdgeInsets.all(1.0),
@@ -99,8 +138,28 @@ class _main extends State<home_page> {
               ],
             ),
           ),
-        ),
-      ],
-    );
-  }
+        )
+        ],
+      ); }
+    Widget _buildListRow(){
+      return Column(children: <Widget>[
+        Padding(
+                    padding: EdgeInsets.only(top: 16.0),
+                    child: Text(
+                      'Header',
+                      style:Theme.of(context).textTheme.body2,
+                    ),
+                  ),
+                  ListView.builder(
+                    padding: EdgeInsets.only(top: 16.0),
+                    itemBuilder: (context,index){
+                      return Padding(padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Nested list view $index'),);
+                    },
+                    itemCount: 6,
+                    shrinkWrap: true,
+                    physics: ClampingScrollPhysics(),
+                  )
+      ],);
+    }
 }
