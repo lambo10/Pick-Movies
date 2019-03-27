@@ -73,6 +73,7 @@ class _main extends State<home_page> {
               [
                 Column(children: <Widget>[
                   _buildAd_space(),
+                  _buildTestCard()
                   
                 ],)
               ]
@@ -82,12 +83,19 @@ class _main extends State<home_page> {
       ),
     );
     }
-    Widget buildTestCard(){
+    Widget _buildTestCard(){
       return Container(
         height: 150,
         child: Card(
           child: InkWell(
-            onTap: (){},
+            onTap: (){
+           Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailScreen(todo: new Todo('test2', 'test2 dsescrip')),
+                ),
+              );
+        },
             child:  FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
@@ -106,12 +114,14 @@ class _main extends State<home_page> {
           padding: const EdgeInsets.all(2.0),
           child:InkWell(
             onTap: (){},
-            child:  FadeInImage.memoryNetwork(
+            child:  Card(
+              child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
                 'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
             fit: BoxFit.cover,
           ),
+            )
           )
         );
     }

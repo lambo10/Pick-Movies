@@ -17,6 +17,8 @@ class DetailScreen extends StatefulWidget{
   _main createState() => _main();
 }
 class _main extends  State<DetailScreen> {
+  final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
+  final Color pageContainerColor = Color.fromRGBO(99, 98, 98, 1);
  var videoWg_with = 500.0;
  var videoWg_hight = 200.0;
  var thumb_n_disp = true;
@@ -60,26 +62,23 @@ class _main extends  State<DetailScreen> {
   );
   });
  }
-
+h1(){
+  return TextStyle(fontWeight: FontWeight.bold,color: Colors.black.withOpacity(1.0),fontSize: 20);
+}
+h2(){
+  return TextStyle(color: Colors.black.withOpacity(1.0),fontSize: 14);
+}
    @override
   Widget build(BuildContext context) {
     // Use the Todo to create our UI
     
     return Scaffold(
-appBar: AppBar(
-actions: <Widget>[
-  IconButton(
-    icon: Icon(Icons.share),
-  ),
-],
-),
-body: Container(
-color: Color.fromRGBO(238, 238, 238, 1),
-     child: ListView(
-       controller: _controller,
-     shrinkWrap: true,
-     children: <Widget>[
-       Stack(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 256.0,
+            
+            flexibleSpace: Stack(
          alignment: AlignmentDirectional.bottomCenter,
          children: <Widget>[
             SizedBox(height: 300.0,
@@ -126,209 +125,45 @@ Icon(Icons.play_arrow,size: 70.0,),
          ],
        ),
       
-         Container(child: Padding(
-padding: const EdgeInsets.only(
-  left: 15.0,top: 3.0
-),
-child: Text('NGN3000', style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),   ),
-),),
-     Container(
-       width: double.infinity,
-       child: Padding(
-         padding: EdgeInsets.all(5.0),
-         child: RaisedButton(
-        onPressed: (){},
-        color: Colors.blue,
-        
-        child: Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Text('Home Tutoring',
-            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0,
-            color: Colors.white),),
-            Text('NGN5000', style: TextStyle(color: Colors.white),)
-          ],
-        )
-     ,
-        )  ),
-       ) ),
-      Container(child: Padding(
-padding: const EdgeInsets.all(3.0),
-child: Center(   child: Card(     child: Column(       mainAxisSize: MainAxisSize.min,       children: <Widget>[
-ListTile(
-  title: Text('What you will learn?', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0,),),
-),
-ListTile(leading: Icon(Icons.done), subtitle: Text( 'Save up NGN 3000 by purchasing all courses at once.', style: TextStyle(fontSize: 15),), ), ButtonTheme.bar( // make buttons use the appropriate styles for cards
-child: Container() ),
-ListTile(leading: Icon(Icons.done), subtitle: Text( 'Save up NGN 3000 by purchasing all courses at once.', style: TextStyle(fontSize: 15),), ), ButtonTheme.bar( // make buttons use the appropriate styles for cards
-child: Container() ),
-ListTile(leading: Icon(Icons.done), subtitle: Text( 'Save up NGN 3000 by purchasing all courses at once.', style: TextStyle(fontSize: 15),), ), ButtonTheme.bar( // make buttons use the appropriate styles for cards
-child: Container() ),
-ListTile(leading: Icon(Icons.done), subtitle: Text( 'Save up NGN 3000 by purchasing all courses at once.', style: TextStyle(fontSize: 15),), ), ButtonTheme.bar( // make buttons use the appropriate styles for cards
-child: Container() ),
- ], ), ), ), 
-    ),),
-      Container(child: Padding(
-padding: const EdgeInsets.all(3.0),
-child: Center(   child: Card(     child: Column(       mainAxisSize: MainAxisSize.min,       children: <Widget>[
-ListTile( title: Text( 'Description', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),), subtitle: Text( 'Save up NGN 3000 by purchasing all courses at once.' ), ), ButtonTheme.bar( // make buttons use the appropriate styles for cards
-child: Container(), ), ], ), ), ), 
-    ),),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Column(children: <Widget>[
+                 _build_starAndDescriptionSection()
+                ],)
+              ]
+            ),
+          )
+        ],
+      ),
+    );
+   
+   }
+    _build_starAndDescriptionSection(){
+      return Container(
+        color: pageBackgroudcolor,
+        child: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Icon(Icons.star,color: Colors.yellow,),
+                  Icon(Icons.star,color: Colors.yellow,),
+                  Icon(Icons.star,color: Colors.yellow,),
+                  Icon(Icons.star,color: Colors.yellow,),
+                  Icon(Icons.star,color: Colors.grey,)
+            ],
+          ),
+          Column(
+            children: <Widget>[
+            Text('Description',
+            style: h1()
+            ),
+          Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
+          style: h2(),)
 
- Container(child: Padding(
-padding: const EdgeInsets.all(3.0),
-child: Card(
-  child: Padding(
-    padding: const EdgeInsets.all(0.0),
-    
-  child:  Column(
-children: <Widget>[
-  Container(
-    child: ListTile(
-      leading: Text(
-      'People also viewed',
-      textAlign: TextAlign.left,
-      style: TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold
-      )
-    ),
-    )
-  ),
-  Container(
-    decoration: const BoxDecoration(
-    border: Border(
-      bottom: BorderSide(width: 1.0, color: Colors.grey,),
-    ),
-    ),
-    child: InkWell(
-      onTap: (){},
-      child: ListTile(
-subtitle:  Container(
-    child: Row(
-      children: <Widget>[
-        Container(
-          width: 130.0,
-          height: 100.0,
-          child: FadeInImage.memoryNetwork(
-  placeholder: kTransparentImage,
-  image:'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
-            fit: BoxFit.cover,
-            ),
-        ),
-        Flexible(
-              child: new Container(
-                padding: new EdgeInsets.only(left: 30.0,),
-                child: new Text(
-                  'Save up NGN 3000 by purchasing all courses at once.',
-                   overflow: TextOverflow.fade,
-                   style: TextStyle(fontSize: 18.0,),
-                   ),
-              ),
-            ),
-      ],
-    ),
-   ),
-  ),
-    ),
-  ),
-  Container(
-    decoration: const BoxDecoration(
-    border: Border(
-      bottom: BorderSide(width: 1.0, color: Colors.grey,),
-    ),
-    ),
-    child: InkWell(
-      onTap: (){},
-      child: ListTile(
-subtitle:  Container(
-    child: Row(
-      children: <Widget>[
-        Container(
-          width: 130.0,
-          height: 100.0,
-          child: FadeInImage.memoryNetwork(
-  placeholder: kTransparentImage,
-  image:'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
-            fit: BoxFit.cover,
-            ),
-        ),
-        Flexible(
-              child: new Container(
-                padding: new EdgeInsets.only(left: 30.0,),
-                child: new Text(
-                  'Save up NGN 3000 by purchasing all courses at once.',
-                   overflow: TextOverflow.fade,
-                   style: TextStyle(fontSize: 18.0,),
-                   ),
-              ),
-            ),
-      ],
-    ),
-   ),
-  ),
-    ),
-  ),
-  Container(
-    decoration: const BoxDecoration(
-    border: Border(
-      bottom: BorderSide(width: 1.0, color: Colors.grey,),
-    ),
-    ),
-    child: InkWell(
-      onTap: (){},
-      child: ListTile(
-subtitle:  Container(
-    child: Row(
-      children: <Widget>[
-        Container(
-          width: 130.0,
-          height: 100.0,
-          child: FadeInImage.memoryNetwork(
-  placeholder: kTransparentImage,
-  image:'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
-            fit: BoxFit.cover,
-            ),
-        ),
-        Flexible(
-              child: new Container(
-                padding: new EdgeInsets.only(left: 30.0,),
-                child: new Text(
-                  'Save up NGN 3000 by purchasing all courses at once.',
-                   overflow: TextOverflow.fade,
-                   style: TextStyle(fontSize: 18.0,),
-                   ),
-              ),
-            ),
-      ],
-    ),
-   ),
-  ),
-    ),
-  ),
-     ],
-  
-
-)
- ,
-  ),
-)
-),
- ),
- Container(
-   height: 100.0,
- )
-       ],
-     ),
-    )
-,
-floatingActionButton: FloatingActionButton.extended(
-  icon: Icon(Icons.video_library),
-  label: Text('BUY NGN3000'),
-  onPressed: (){},
-)
-);
+          ],)        ],
+      ),);
     }
 }
 
