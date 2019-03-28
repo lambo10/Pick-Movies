@@ -141,6 +141,11 @@ Icon(Icons.play_arrow,size: 70.0,),
           )
         ],
       ),
+      floatingActionButton:    FloatingActionButton.extended(
+  label: Text('Doawnload'),
+  icon: Icon(Icons.file_download),
+  onPressed: (){},
+),
     );
    
    }
@@ -156,21 +161,11 @@ Icon(Icons.play_arrow,size: 70.0,),
                   Icon(Icons.star,color: Colors.yellow,),
                   Icon(Icons.star,color: Colors.yellow,),
                   Icon(Icons.star,color: Colors.grey,),
-                  Expanded(
-                    child: FlatButton(
-                      color: Colors.blue,
-                      child: Row(
-                        children: <Widget>[
-                          Text('Doawnload'),
-                          Icon(Icons.file_download)
-                        ],
-                      ),
-                    ),
-                  )
             ],
           ),
           Container(
             height: 400,
+            alignment: Alignment.topLeft,
             padding: EdgeInsets.all(5.0),
             child: Column(
             children: <Widget>[
@@ -182,11 +177,7 @@ Icon(Icons.play_arrow,size: 70.0,),
           style: h2(),
           textAlign: text_alignLeft(),
           ),
-          FloatingActionButton.extended(
-  label: Text('Doawnload'),
-  icon: Icon(Icons.file_download),
-  onPressed: (){},
-)
+       
 
           ],),
           )        ],
