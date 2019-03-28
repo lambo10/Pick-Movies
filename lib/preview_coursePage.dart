@@ -66,7 +66,10 @@ h1(){
   return TextStyle(fontWeight: FontWeight.bold,color: Colors.white.withOpacity(1.0),fontSize: 25);
 }
 h2(){
-  return TextStyle(color: Colors.white.withOpacity(1.0),fontSize: 20);
+  return TextStyle(color: Colors.white.withOpacity(1.0),fontSize: 15);
+}
+h2_withBold(){
+  return TextStyle(fontWeight: FontWeight.bold,color: Colors.white.withOpacity(1.0),fontSize: 15);
 }
 text_alignLeft(){
   return TextAlign.left;
@@ -169,8 +172,9 @@ Icon(Icons.play_arrow,size: 70.0,),
             padding: EdgeInsets.all(5.0),
             child: Column(
             children: <Widget>[
+              Text('Acustic Cave 2', style: h1(),),
             Text('Description',
-            style: h1(),
+            style: h2_withBold(),
             textAlign: text_alignLeft(),
             ),
           Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
