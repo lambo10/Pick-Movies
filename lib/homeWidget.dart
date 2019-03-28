@@ -73,10 +73,10 @@ class _main extends State<home_page> {
               [
                 Column(children: <Widget>[
                   _buildAd_space(),
-                  _buildNewGrideList(),
-                  _buildNewGrideList(),
+                  _buildNewGrideList('img1Address','img2Address'),
+                  _buildNewGrideList('img1Address','img2Address'),
                   _buildAd_space(),
-                  _buildNewGrideList()
+                  _buildNewGrideList('img1Address','img2Address')
                   
                 ],)
               ]
