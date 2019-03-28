@@ -30,24 +30,70 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
  Widget build(BuildContext context) {
    return Scaffold (
      backgroundColor: pageBackgroudcolor,
+      appBar: AppBar(
+       title: Text('Search'),
+     ),
      body: Column(
        children: <Widget>[
          Container(
+           padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+    border: Border(
+      bottom: BorderSide(width: 1.0, color: pageContainerColor),
+    ),
+    ),
            child: TextField(
   decoration: new InputDecoration(
       border: new OutlineInputBorder(
         borderRadius: const BorderRadius.all(
-          const Radius.circular(10.0),
+          const Radius.circular(30.0),
         ),
       ),
       filled: true,
-      hintStyle: new TextStyle(color: Colors.grey[800]),
+      hintStyle: new TextStyle(color: Colors.white),
       hintText: "Type in your text",
-      fillColor: Colors.white70),
+      fillColor: pageBackgroudcolor),
 ),
-         )
-       ],
+         ),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont(),
+       _buildSearchResultCont()
+        ],
      )
    );
+ }
+ Widget _buildSearchResultCont(){
+   return  Container(
+            decoration: BoxDecoration(
+    border: Border(
+      bottom: BorderSide(width: 1.0, color: pageContainerColor),
+    ),
+    ),
+           child: InkWell(
+             onTap: (){},
+             child: Row(children: <Widget>[
+               Container(
+                 width: 50,
+                 height: 50,
+                 child:  FadeInImage.memoryNetwork(
+          
+            image:
+                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+            fit: BoxFit.cover,
+          ),),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            child: Text('Beauty and the beast'),
+          )
+             ],),
+           ),
+         );
+       
  }
 }
