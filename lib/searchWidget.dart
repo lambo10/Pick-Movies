@@ -46,6 +46,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
              style: TextStyle(color: Colors.white),
   decoration: new InputDecoration(
       border: new OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.blue, width: 2),
         borderRadius: const BorderRadius.all(
           const Radius.circular(30.0),
         ),
@@ -61,7 +62,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
          height: MediaQuery.of(context).size.height - 70,
          padding: EdgeInsets.all(10.0),
          child: ListView(
-           shrinkWrap: true,
+           
            children: <Widget>[
              _buildSearchResultCont(),
        _buildSearchResultCont(),
