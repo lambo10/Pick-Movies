@@ -30,6 +30,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
  Widget build(BuildContext context) {
    
    return Scaffold (
+     backgroundColor: pageBackgroudcolor,
      appBar: AppBar(
        title: Text('Saved'),
      ),
@@ -59,7 +60,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
  }
  Widget _buildSaveVidCont(){
    return  Container(
-     padding: EdgeInsets.only(bottom: 5),
+     padding: EdgeInsets.only(bottom: 10),
             decoration: BoxDecoration(
     border: Border(
       bottom: BorderSide(width: 1.0, color: pageContainerColor),
@@ -69,8 +70,8 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
              onTap: (){},
              child: Row(children: <Widget>[
                Container(
-                 width: 70,
-                 height: 70,
+                 width: 110,
+                 height: 110,
                  child:  FadeInImage.memoryNetwork(
           
             image:
