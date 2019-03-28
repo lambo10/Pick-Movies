@@ -118,7 +118,7 @@ text_alignLeft(){
               children: <Widget>[
                 FadeInImage.memoryNetwork(
   placeholder: kTransparentImage,
-  image: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UY1200_CR90,0,630,1200_AL_.jpg',
+  image: 'https://data.junkee.com/wp-content/uploads/2018/04/aveng.png',
   fit: BoxFit.cover,
 ),
 Icon(Icons.play_arrow,size: 70.0,),

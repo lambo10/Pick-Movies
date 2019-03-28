@@ -73,6 +73,9 @@ class _main extends State<home_page> {
               [
                 Column(children: <Widget>[
                   _buildAd_space(),
+                  _buildNewGrideList(),
+                  _buildNewGrideList(),
+                  _buildAd_space(),
                   _buildNewGrideList()
                   
                 ],)
@@ -126,7 +129,7 @@ class _main extends State<home_page> {
           )
         );
     }
-    Widget _buildNewGrideList(){
+    Widget _buildNewGrideList(String image1Addr,String image2Addr){
       return Container(
         color: pageBackgroudcolor,
         child: Row(
