@@ -58,11 +58,12 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
       fillColor: pageBackgroudcolor),
 ),
          ),
-       Container(
+      Flexible(
+        child:  Container(
          height: MediaQuery.of(context).size.height - 70,
          padding: EdgeInsets.all(10.0),
          child: ListView(
-           
+           shrinkWrap: true,
            children: <Widget>[
              _buildSearchResultCont(),
        _buildSearchResultCont(),
@@ -76,6 +77,8 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
            ],
          ),
        )
+      ,
+      )
         ],
      )
    );
