@@ -43,19 +43,27 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
     ),
     ),
            child: TextField(
+             style: TextStyle(color: Colors.white),
   decoration: new InputDecoration(
       border: new OutlineInputBorder(
         borderRadius: const BorderRadius.all(
           const Radius.circular(30.0),
         ),
       ),
+      
       filled: true,
       hintStyle: new TextStyle(color: Colors.white),
       hintText: "Type in your text",
       fillColor: pageBackgroudcolor),
 ),
          ),
-       _buildSearchResultCont(),
+       Container(
+         height: MediaQuery.of(context).size.height - 70,
+         padding: EdgeInsets.all(10.0),
+         child: ListView(
+           shrinkWrap: true,
+           children: <Widget>[
+             _buildSearchResultCont(),
        _buildSearchResultCont(),
        _buildSearchResultCont(),
        _buildSearchResultCont(),
@@ -64,12 +72,16 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
        _buildSearchResultCont(),
        _buildSearchResultCont(),
        _buildSearchResultCont()
+           ],
+         ),
+       )
         ],
      )
    );
  }
  Widget _buildSearchResultCont(){
    return  Container(
+     padding: EdgeInsets.only(bottom: 5),
             decoration: BoxDecoration(
     border: Border(
       bottom: BorderSide(width: 1.0, color: pageContainerColor),
@@ -89,7 +101,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
           ),),
           Container(
             padding: EdgeInsets.only(left: 20),
-            child: Text('Beauty and the beast'),
+            child: Text('Beauty and the beast', style: TextStyle(color: Colors.white),),
           )
              ],),
            ),
