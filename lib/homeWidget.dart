@@ -29,7 +29,7 @@ class home_page extends StatefulWidget {
 class _main extends State<home_page> {
   final List<Todo> todos = new List(0);
   final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
-  final Color pageContainerColor = Color.fromRGBO(99, 98, 98, 1);
+  final Color pageContainerColor = Color.fromRGBO(100, 99, 99, 1);
 
   Card getStructuredGridCell(name, image) {
     return new Card(
@@ -115,6 +115,7 @@ class _main extends State<home_page> {
           child:InkWell(
             onTap: (){},
             child:  Card(
+              color: pageContainerColor,
               child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
@@ -133,6 +134,7 @@ class _main extends State<home_page> {
           Container(width:  MediaQuery.of(context).size.width/2,
           height: MediaQuery.of(context).size.height/3,
           child: Card(
+            color: pageContainerColor,
            child: InkWell(
             onTap:  (){
            Navigator.push(
@@ -156,6 +158,7 @@ class _main extends State<home_page> {
           Container(width:  MediaQuery.of(context).size.width/2,
           height: MediaQuery.of(context).size.height/3,
           child: Card(
+            color: pageContainerColor,
            child: InkWell(
             onTap:  (){
            Navigator.push(

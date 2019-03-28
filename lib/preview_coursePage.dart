@@ -172,15 +172,15 @@ Icon(Icons.play_arrow,size: 70.0,),
             padding: EdgeInsets.all(5.0),
             child: Column(
             children: <Widget>[
-              Text('Acustic Cave 2', style: h1(),),
-            Text('Description',
+              Container(alignment: Alignment.center, child: Text('Acustic Cave 2', style: h1(),textAlign: TextAlign.left,),),
+           Container(alignment: Alignment.center,child:  Text('Description',
             style: h2_withBold(),
-            textAlign: text_alignLeft(),
-            ),
-          Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
+            textAlign: TextAlign.left,
+            ),),
+         Container(alignment: Alignment.center,child:  Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
           style: h2(),
-          textAlign: text_alignLeft(),
-          ),
+          textAlign: TextAlign.left,
+          ),)
        
 
           ],),
