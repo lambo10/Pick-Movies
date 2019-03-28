@@ -155,11 +155,23 @@ Icon(Icons.play_arrow,size: 70.0,),
                   Icon(Icons.star,color: Colors.yellow,),
                   Icon(Icons.star,color: Colors.yellow,),
                   Icon(Icons.star,color: Colors.yellow,),
-                  Icon(Icons.star,color: Colors.grey,)
+                  Icon(Icons.star,color: Colors.grey,),
+                  Expanded(
+                    child: FlatButton(
+                      color: Colors.blue,
+                      child: Row(
+                        children: <Widget>[
+                          Text('Doawnload'),
+                          Icon(Icons.file_download)
+                        ],
+                      ),
+                    ),
+                  )
             ],
           ),
           Container(
-            height: double.infinity,
+            height: 400,
+            padding: EdgeInsets.all(5.0),
             child: Column(
             children: <Widget>[
             Text('Description',
@@ -169,11 +181,18 @@ Icon(Icons.play_arrow,size: 70.0,),
           Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
           style: h2(),
           textAlign: text_alignLeft(),
-          )
+          ),
+          FloatingActionButton.extended(
+  label: Text('Doawnload'),
+  icon: Icon(Icons.file_download),
+  onPressed: (){},
+)
 
           ],),
           )        ],
-      ),);
+      ),
+      
+      );
     }
 }
 

@@ -69,7 +69,17 @@ class _SampleAppPageState extends State<SampleAppPage> {
         child: _children[_currentIndex],
 //        color: Colors.blueAccent,
       ),
-      bottomNavigationBar: BottomNavigationBar(
+    bottomNavigationBar: new Theme(
+    data: Theme.of(context).copyWith(
+        // sets the background color of the `BottomNavigationBar`
+        canvasColor: Color.fromRGBO(100, 99, 99, 1.0),
+        // sets the active color of the `BottomNavigationBar` if `Brightness` is light
+        primaryColor: Colors.blue,
+        textTheme: Theme
+            .of(context)
+            .textTheme
+            .copyWith(caption: new TextStyle(color: Colors.white))), // sets the inactive color of the `BottomNavigationBar`
+    child: BottomNavigationBar(
         onTap: onTabTapped, // new
         currentIndex: _currentIndex, // new
         type: BottomNavigationBarType.fixed,
@@ -89,7 +99,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.person), title: new Text('Profile'))
         ],
-      ),
+      )),
     );
   }
 }

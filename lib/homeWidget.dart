@@ -126,46 +126,60 @@ class _main extends State<home_page> {
         );
     }
     Widget _buildNewGrideList(){
-      return Column(children: <Widget>[
-        Padding(
-                    padding: EdgeInsets.only(top: 16.0),
-                    child: Text(
-                      'Header',
-                      style:Theme.of(context).textTheme.body2,
-                    ),
-                  ),
-                  ListView.builder(
-                    padding: EdgeInsets.only(top: 16.0),
-                    itemBuilder: (context,index){
-                      return Padding(padding: EdgeInsets.only(top: 8.0),
+      return Container(
+        color: pageBackgroudcolor,
+        child: Row(
+        children: <Widget>[
+          Container(width:  MediaQuery.of(context).size.width/2,
+          height: MediaQuery.of(context).size.height/3,
+          child: Card(
+           child: InkWell(
+            onTap:  (){
+           Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailScreen(todo: new Todo('test2', 'test2 dsescrip')),
+                ),
+              );
+        },
             
-          child: Container(
-            color: pageBackgroudcolor,
-            child: GridView.count(
-              primary: true,
-              padding: const EdgeInsets.all(1.0),
-              crossAxisCount: 2,
-              childAspectRatio: 1.1,
-              mainAxisSpacing: 1.0,
-              crossAxisSpacing: 1.0,
-              children: <Widget>[
-                getStructuredGridCell("Facebook", "social/facebook.png"),
-                getStructuredGridCell("Twitter", "social/twitter.png"),
-                getStructuredGridCell("Instagram", "social/instagram.png"),
-                getStructuredGridCell("Linkedin", "social/linkedin.png"),
-                getStructuredGridCell("Gooogle Plus", "social/google_plus.png"),
-                getStructuredGridCell("Launcher Icon", "ic_launcher.png"),
-              ],
-            ),
+              child: FadeInImage.memoryNetwork(
+            placeholder: kTransparentImage,
+            image:
+                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+            fit: BoxFit.cover,
           ),
-        );
-                    },
-                    itemCount: 6,
-                    shrinkWrap: true,
-                    physics: ClampingScrollPhysics(),
-                  )
-      ],);
-   
+            
+          ), 
+          ),
+          ),
+          Container(width:  MediaQuery.of(context).size.width/2,
+          height: MediaQuery.of(context).size.height/3,
+          child: Card(
+           child: InkWell(
+            onTap:  (){
+           Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailScreen(todo: new Todo('test2', 'test2 dsescrip')),
+                ),
+              );
+        },
+            
+              child: FadeInImage.memoryNetwork(
+            placeholder: kTransparentImage,
+            image:
+                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+            fit: BoxFit.cover,
+          ),
+            
+          ), 
+          ),
+          )
+        
+        ],
+      )
+      ); }
     Widget _buildListRow(){
       return Column(children: <Widget>[
         Padding(
@@ -187,5 +201,4 @@ class _main extends State<home_page> {
                   )
       ],);
     }
-}
 }
