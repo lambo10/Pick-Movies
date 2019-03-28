@@ -58,13 +58,13 @@ class _main extends State<home_page> {
             flexibleSpace:Carousel(
             images: [
               NetworkImage(
-                  'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/1170x500-01-1.jpg?alt=media&token=664522c6-1a23-48c4-baa8-82b59c2884df'),
+                  'https://i.pinimg.com/originals/22/74/66/22746674f0774c5c3eaaf53fc75ebfe4.jpg'),
               NetworkImage(
-                  'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/kids-banner.jpg?alt=media&token=9856e43a-0c4a-4283-8852-e19eab877363'),
+                  'https://cdn3.movieweb.com/i/article/gRtSPj6a0BCy6EgbB70u7V6gIsHCZ8/798:50/Black-Panther-Movie-Sequels-Spin-Offs-Marvel.jpg'),
               NetworkImage(
-                  'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/LENOIR-4.jpg?alt=media&token=a335a96f-28b8-4b0c-ac91-54707d80eed2'),
+                  'https://vignette.wikia.nocookie.net/60e79707-365a-4574-a838-1b11c8861a4f/scale-to-width-down/800'),
               NetworkImage(
-                  'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/wgep067_thumbRAISEYOURHAND.png?alt=media&token=aba74d31-845c-44c1-b202-e7a711519119')
+                  'https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/09/into-the-badlands-season-1-cast-1200x707.jpg')
             ],
           ),
           ),
@@ -172,7 +172,7 @@ class _main extends State<home_page> {
               child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
-                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+                'https://images-na.ssl-images-amazon.com/images/I/81uXn2KElDL._SY445_.jpg',
             fit: BoxFit.cover,
           ),
             
