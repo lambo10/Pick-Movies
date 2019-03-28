@@ -119,7 +119,7 @@ class _main extends State<home_page> {
               child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
-                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+                'https://i.ytimg.com/vi/QJ4NAG8va6U/maxresdefault.jpg',
             fit: BoxFit.cover,
           ),
             )
@@ -148,7 +148,7 @@ class _main extends State<home_page> {
               child: FadeInImage.memoryNetwork(
             placeholder: kTransparentImage,
             image:
-                'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/course%20pic1.jpg?alt=media&token=aaaa1ebe-1f34-4d2a-a475-7de97ed34fbf',
+                'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6250/6250129_sa.jpg;maxHeight=640;maxWidth=550',
             fit: BoxFit.cover,
           ),
             

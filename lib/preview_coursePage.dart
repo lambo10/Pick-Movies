@@ -92,7 +92,7 @@ text_alignLeft(){
           width: double.infinity,
             child: FadeInImage.memoryNetwork(
   placeholder: kTransparentImage,
-  image:'https://firebasestorage.googleapis.com/v0/b/liliteach-3e0c2.appspot.com/o/bac_pic2.jpg?alt=media&token=7a0f61a9-97d4-4447-b23e-938d9f1dd56a',
+  image:'https://www.proximus.be/dam/jcr:d0accdbc-2551-4065-ac40-84c131fe10b6/cdn/sites/iportal/images/blogs/articles/res/avengers-infinity-war-blog-en~2018-08-30-10-52-57~cache.jpg',
             fit: BoxFit.cover,
             ),
           
@@ -118,7 +118,7 @@ text_alignLeft(){
               children: <Widget>[
                 FadeInImage.memoryNetwork(
   placeholder: kTransparentImage,
-  image: 'https://picsum.photos/250?image=9',
+  image: 'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UY1200_CR90,0,630,1200_AL_.jpg',
   fit: BoxFit.cover,
 ),
 Icon(Icons.play_arrow,size: 70.0,),
