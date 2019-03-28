@@ -63,10 +63,13 @@ class _main extends  State<DetailScreen> {
   });
  }
 h1(){
-  return TextStyle(fontWeight: FontWeight.bold,color: Colors.black.withOpacity(1.0),fontSize: 20);
+  return TextStyle(fontWeight: FontWeight.bold,color: Colors.white.withOpacity(1.0),fontSize: 25);
 }
 h2(){
-  return TextStyle(color: Colors.black.withOpacity(1.0),fontSize: 14);
+  return TextStyle(color: Colors.white.withOpacity(1.0),fontSize: 20);
+}
+text_alignLeft(){
+  return TextAlign.left;
 }
    @override
   Widget build(BuildContext context) {
@@ -74,6 +77,7 @@ h2(){
     
     return Scaffold(
       body: CustomScrollView(
+  
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 256.0,
@@ -154,15 +158,21 @@ Icon(Icons.play_arrow,size: 70.0,),
                   Icon(Icons.star,color: Colors.grey,)
             ],
           ),
-          Column(
+          Container(
+            height: double.infinity,
+            child: Column(
             children: <Widget>[
             Text('Description',
-            style: h1()
+            style: h1(),
+            textAlign: text_alignLeft(),
             ),
           Text('Man decided to have a small adventure when he walked into a cave to dicover he was not the only persone present in the cave .He dicovers  a world of machines where everything small on the real world is big', 
-          style: h2(),)
+          style: h2(),
+          textAlign: text_alignLeft(),
+          )
 
-          ],)        ],
+          ],),
+          )        ],
       ),);
     }
 }

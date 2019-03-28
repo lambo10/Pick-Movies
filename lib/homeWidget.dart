@@ -73,7 +73,7 @@ class _main extends State<home_page> {
               [
                 Column(children: <Widget>[
                   _buildAd_space(),
-                  _buildTestCard()
+                  _buildNewGrideList()
                   
                 ],)
               ]
@@ -126,9 +126,19 @@ class _main extends State<home_page> {
         );
     }
     Widget _buildNewGrideList(){
-      return  Column(
-        children: <Widget>[
-           Flexible(
+      return Column(children: <Widget>[
+        Padding(
+                    padding: EdgeInsets.only(top: 16.0),
+                    child: Text(
+                      'Header',
+                      style:Theme.of(context).textTheme.body2,
+                    ),
+                  ),
+                  ListView.builder(
+                    padding: EdgeInsets.only(top: 16.0),
+                    itemBuilder: (context,index){
+                      return Padding(padding: EdgeInsets.only(top: 8.0),
+            
           child: Container(
             color: pageBackgroudcolor,
             child: GridView.count(
@@ -148,9 +158,14 @@ class _main extends State<home_page> {
               ],
             ),
           ),
-        )
-        ],
-      ); }
+        );
+                    },
+                    itemCount: 6,
+                    shrinkWrap: true,
+                    physics: ClampingScrollPhysics(),
+                  )
+      ],);
+   
     Widget _buildListRow(){
       return Column(children: <Widget>[
         Padding(
@@ -172,4 +187,5 @@ class _main extends State<home_page> {
                   )
       ],);
     }
+}
 }
