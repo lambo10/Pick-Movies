@@ -4,18 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-class Todo {
- final String title;
- final String videoAddress;
-
-  Todo(this.title, this.videoAddress);
-}
 class ChewieDemo extends StatefulWidget {
-  final Todo todo;
-  ChewieDemo({this.title = 'Chewie Demo', @required this.todo});
+  String videoAddress;
+  ChewieDemo({Key key,this.title, this.videoAddress}): super(key: key);
 
   final String title;
-
+  
   @override
   State<StatefulWidget> createState() {
     return _ChewieDemoState();
@@ -33,7 +27,7 @@ class _ChewieDemoState extends State<ChewieDemo> {
   void initState() {
     super.initState();
     _videoPlayerController1 = VideoPlayerController.network(
-      ""
+      widget.videoAddress
         );
        _chewieController = ChewieController(
       videoPlayerController: _videoPlayerController1,

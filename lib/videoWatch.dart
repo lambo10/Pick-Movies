@@ -3,15 +3,11 @@ import 'package:flutter/material.dart';
 import 'videoPLA_PS.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-class Todo {
- final String title;
- final String description;
 
-  Todo(this.title, this.description);
-}
 class videoWatchScreen extends StatefulWidget{
-   final Todo todo;
- videoWatchScreen({Key key, @required this.todo}) : super(key: key);
+   final String video_address;
+   final String videoID;
+ videoWatchScreen({Key key,this.video_address,this.videoID}) : super(key: key);
   
 @override
   _main createState() => _main();
@@ -77,7 +73,6 @@ text_alignLeft(){
    @override
   Widget build(BuildContext context) {
     // Use the Todo to create our UI
-    
     return Scaffold(
       backgroundColor: pageBackgroudcolor,
       body: CustomScrollView(
@@ -98,11 +93,12 @@ text_alignLeft(){
    
    }
 
+
    _video_dispPanel(){
      return Container(
        width: double.infinity,
        height: MediaQuery.of(context).size.height/2.5,
-        child: ChewieDemo(title: 'preview video',),
+        child: ChewieDemo(title: 'preview video',videoAddress: widget.video_address,),
      );
    }
    }

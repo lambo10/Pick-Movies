@@ -4,12 +4,6 @@ import 'preview_coursePage.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
-class Todo {
- final String title;
- final String description;
-
-  Todo(this.title, this.description);
-}
 class homeWget extends StatelessWidget {
   static FirebaseAnalytics analytics = FirebaseAnalytics();
 

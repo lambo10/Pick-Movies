@@ -72,7 +72,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
                 Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => videoWatchScreen(todo: new Todo('test2', 'test2 dsescrip')),
+                  builder: (context) => videoWatchScreen(video_address: 'http://dl9.heyserver.in/film/2018-7/Avengers.Infinity.War.2018.720p.WEB-DL.2CH.x265.HEVC-PSA.mkv',videoID: '',),
                 ),
               );
              },
