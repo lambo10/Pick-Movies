@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'videoWatch.dart';
 
 class saveWideget extends StatelessWidget{
   static FirebaseAnalytics analytics = FirebaseAnalytics();
@@ -67,7 +68,14 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
     ),
     ),
            child: InkWell(
-             onTap: (){},
+             onTap: (){
+                Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => videoWatchScreen(todo: new Todo('test2', 'test2 dsescrip')),
+                ),
+              );
+             },
              child: Row(children: <Widget>[
                Container(
                  width: 200,

@@ -79,6 +79,7 @@ text_alignLeft(){
     // Use the Todo to create our UI
     
     return Scaffold(
+      backgroundColor: pageBackgroudcolor,
       body: CustomScrollView(
   
         slivers: <Widget>[
@@ -86,7 +87,7 @@ text_alignLeft(){
             delegate: SliverChildListDelegate(
               [
                 Column(children: <Widget>[
-                 
+                _video_dispPanel()
                 ],)
               ]
             ),
