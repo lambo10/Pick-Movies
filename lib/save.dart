@@ -70,7 +70,7 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
              onTap: (){},
              child: Row(children: <Widget>[
                Container(
-                 width: 110,
+                 width: 200,
                  height: 110,
                  child:  FadeInImage.memoryNetwork(
           
@@ -80,7 +80,19 @@ final Color pageBackgroudcolor = Color.fromRGBO(63, 63, 63, 1);
           ),),
           Container(
             padding: EdgeInsets.only(left: 20),
-            child: Text('Beauty and the beast', style: TextStyle(color: Colors.white),),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Text('Beauty and the beast', style: TextStyle(color: Colors.white),),
+                ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Text('1-12-2019', style: TextStyle(color: Colors.white),),
+                ),       
+              ],
+            )
           )
              ],),
            ),

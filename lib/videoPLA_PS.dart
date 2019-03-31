@@ -4,9 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+class Todo {
+ final String title;
+ final String videoAddress;
 
+  Todo(this.title, this.videoAddress);
+}
 class ChewieDemo extends StatefulWidget {
-  ChewieDemo({this.title = 'Chewie Demo'});
+  final Todo todo;
+  ChewieDemo({this.title = 'Chewie Demo', @required this.todo});
 
   final String title;
 
@@ -21,12 +27,14 @@ class _ChewieDemoState extends State<ChewieDemo> {
   VideoPlayerController _videoPlayerController1;
   VideoPlayerController _videoPlayerController2;
   ChewieController _chewieController;
+  
 
   @override
   void initState() {
     super.initState();
     _videoPlayerController1 = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+      ""
+        );
        _chewieController = ChewieController(
       videoPlayerController: _videoPlayerController1,
       aspectRatio: 3 / 2,

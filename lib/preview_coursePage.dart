@@ -171,9 +171,10 @@ Icon(Icons.play_arrow,size: 70.0,),
             alignment: Alignment.topLeft,
             padding: EdgeInsets.all(5.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(alignment: Alignment.center, child: Text('Acustic Cave 2', style: h1(),textAlign: TextAlign.left,),),
-           Container(alignment: Alignment.center,child:  Text('Description',
+              Container(alignment: Alignment.topLeft, child: Text('Acustic Cave 2', style: h1(),textAlign: TextAlign.left,),),
+           Container(alignment: Alignment.topLeft,child:  Text('Description',
             style: h2_withBold(),
             textAlign: TextAlign.left,
             ),),

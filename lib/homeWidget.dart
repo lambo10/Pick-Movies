@@ -4,6 +4,12 @@ import 'preview_coursePage.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
+class Todo {
+ final String title;
+ final String description;
+
+  Todo(this.title, this.description);
+}
 class homeWget extends StatelessWidget {
   static FirebaseAnalytics analytics = FirebaseAnalytics();
 
@@ -53,6 +59,7 @@ class _main extends State<home_page> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            backgroundColor: pageBackgroudcolor,
             expandedHeight: 256.0,
             
             flexibleSpace:Carousel(
